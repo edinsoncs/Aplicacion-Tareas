@@ -1,0 +1,49 @@
+<div ui-content-for="title">
+  <span>AJAX</span>
+</div>
+<div class="scrollable" ng-controller="ajaxCtrl">
+<div class="scrollable-content" >
+<div class="section section">
+
+<div class="panel-group" Ui-state="myAccordion" ui-default='0'>
+
+        <div class="panel panel-default" ng-repeat="item in mostrar ">
+          <div class="panel-heading" ui-set="{'myAccordion': {{$index}}}">
+        
+            <h4 class="panel-title">
+              {{item.pelicula}}
+            </h4>
+          </div>
+
+          <div ui-if="myAccordion == {{$index}}">
+            <div class="panel-body">
+               {{item.pelicula}}. Estreno : {{item.estreno}} Caratula : <img ng-src= "{{item.caratula}}" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+	<p class="section-success">Respuesta: {{exito}}
+									{{sinconexion}}
+									{{local_vacio}}</p>
+					
+	<div class="panel-group" ui-state="myAccordion" ui-default='0'>
+
+        <div class="panel panel-default" ng-repeat="item in dato ">
+          <div class="panel-heading" ui-set="{'myAccordion': {{$index}}}">
+        
+            <h4 class="panel-title">
+              {{item.pelicula}}
+            </h4>
+          </div>
+
+          <div ui-if="myAccordion == {{$index}}">
+            <div class="panel-body">
+               {{item.pelicula}}. Estreno : {{item.estreno}} Caratula : <img ng-src= "{{item.caratula}}" />
+            </div>
+          </div>
+        </div>
+      </div>				  
+	
+</div>
+</div>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karma:400,600,700" rel="stylesheet">
+    <meta charset="utf-8" />
+    <title>Mi App Angular</title>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
+       
+    <link rel="stylesheet" href="dist/css/mobile-angular-ui-base.css" />
+    <link rel="stylesheet" href="assets/css/app.css">
+    <script src="dist/js/angular.js"></script>
+    <script src="dist/js/angular-route.js"></script>
+  
+    <script src="dist/js/mobile-angular-ui.min.js"></script>
+	
+	  <script src="assets/js/app.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/controller.js"></script>
+    <script src="assets/js/functions.js"></script>
+	
+
+  </head>
+
+  <body ng-app="appTareas" ui-prevent-touchmove-defaults ng-controller="webapp">
+
+    <div ng-include="'inc/sidebar.html'" ui-track-as-search-param='true' class="sidebar sidebar-left">
+	</div>
+	<div class="app" ui-swipe-right='Ui.turnOn("uiSidebarLeft")' ui-swipe-left='Ui.turnOff("uiSidebarLeft")'>
+      
+      <div class="app-body" ng-class="{loading: loading}">
+        <div ng-show="loading" class="app-content-loading">
+          <i class="fa fa-spinner fa-spin loading-spinner"></i>
+        </div>
+        <div class="app-content">
+          <ng-view></ng-view>
+        </div>
+      </div>
+
+	
+
+  </div>
+
+    <div ui-yield-to="modals"></div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="assets/js/index.js"></script>
+    <script type="text/javascript">
+       app.initialize();
+    </script>
+</body>
+
+</html>

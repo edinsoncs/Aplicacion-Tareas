@@ -1,0 +1,53 @@
+<section class="scrollable page-view">
+
+	<div class="scrollable-content">
+		
+
+		<div class="navbar">
+	        <header class="header__Content f c" >
+	        	 <div ui-toggle="uiSidebarLeft" class="btn sidebar-toggle">
+	            	<i class="fa fa-bars"></i>
+	          	 </div>
+				 <div class="container__Header">
+				 	<a ng-href="#home">
+						<h2> 
+						Tareas <span>Hoy</span></h2>
+					</a>
+				 </div>
+			</header>
+	       
+       </div>
+
+		
+		<section class="container__List" ng-show="conexion">
+			<article class="list__Article" ng-repeat="i in tareasall" >
+				<a ng-href="#/view/{{i.id}}" class="no-a f">
+					<header class="list__Article--Header">
+						<h2>{{i.id}}</h2>
+					</header>
+					<div class="list__Article--Description">
+						<p>{{i.description}}</p>
+					</div>
+				</a>
+			</article>
+		</section>
+
+		<section class="container__List" ng-show="offline">
+			<article class="list__Article" ng-repeat="i in tareasall" >
+				<a ng-href="#/view/{{i.id}}" class="no-a f">
+					<header class="list__Article--Header">
+						<h2>{{name[0] | uppercase}}</h2>
+					</header>
+					<div class="list__Article--Description">
+						<p>{{i.detalle}}</p>
+					</div>
+				</a>
+			</article>
+		</section>
+
+	</div>
+
+	
+	
+</section>
+

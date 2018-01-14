@@ -1,0 +1,43 @@
+<section class="scrollable page-ingresar">
+
+	<div class="scrollable-content">
+		<header class="header__Content" >
+			<h2>
+				<a ng-href="#home">
+				Tareas <span>Hoy</span></h2>
+				</a>
+		</header>
+
+		<form ng-submit="form($event)"  novalidate class="form-login">
+			
+			<div class="showsuccess" ng-show="form1">
+				<h2>{{form1text}}</h2>
+			</div>
+
+			<div class="contain" ng-show="form2">
+				<div class="form-group">
+					<label for="titulo">Email</label>
+					<input name="titulo" id="email" type="text" ng-model="dato.email" placeholder="Ingrese email" >
+				</div>
+				<div class="form-group">
+					<label for="nombre">Nombre</label>
+					<input name="nombre" id="nombre" type="text" ng-model="dato.nombre" placeholder="Ingrese nombre">
+				</div>
+				<div class="form-group">
+					<label for="password">Password</label>
+					<input name="password" id="password" type="password" ng-model="dato.password" placeholder="Ingrese password" >
+				</div>
+				<div class="form-group">
+					<label for="password2">Confirmar Password</label>
+					<input name="password2" id="password2" type="password" ng-model="dato.password2" placeholder="Repite password" >
+				</div>
+				<div class="form-group">
+					<input type="submit" value="Registrar">
+				</div>
+			</div>
+		</form>
+		
+	</div>
+	
+</section>
+

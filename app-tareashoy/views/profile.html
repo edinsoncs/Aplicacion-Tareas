@@ -1,0 +1,120 @@
+<section class="scrollable page-profile">
+
+	<div class="scrollable-content">
+		<div class="navbar">
+	        <header class="header__Content f c" >
+	        	 <div ui-toggle="uiSidebarLeft" class="btn sidebar-toggle">
+	            	<i class="fa fa-bars"></i>
+	          	 </div>
+				 <div class="container__Header">
+				 	<a ng-href="#home">
+						<h2>Tareas <span>Hoy</span></h2>
+					</a>
+				 </div>
+			</header>
+	       
+       </div>
+
+
+       <div class="profile" ng-show="online">
+       		
+       		<header class="profile__Header">
+       			
+				    <h2>{{name[0] | uppercase}}</h2>
+
+       		</header>
+
+       		<div class="profile__my">
+       			<ul class="ul">
+       				<li class="list {{active}}">
+       					<a href="" class="link" ng-click="tabs(1)">
+       						Mis Preguntas
+       					</a>
+       				</li>
+       				<li class="list {{active2}}">
+       					<a href="" class="link" ng-click="tabs(2)">
+       						Mis Respuestas
+       					</a>
+       				</li>
+       			</ul>
+       			<div class="profile__my__Show" ng-show="show">
+       				<article class="article" ng-repeat="obj in mypre">
+       					<header class="header">
+       						<h3>{{name[0] | uppercase}}</h3>
+       					</header>
+       					<div class="description">
+       						<p>{{obj.description}}</p>
+       					</div>
+       				</article>
+       				
+       			</div>
+       			<div class="profile__my__Show" ng-show="show2">
+       				<article class="article" ng-repeat="obj in myres">
+       					<header class="header">
+       						<h3>{{name[0] | uppercase}}</h3>
+       					</header>
+       					<div class="description">
+       						<p>{{obj.description}}</p>
+       					</div>
+       				</article>
+       				
+       			</div>
+
+       			
+       		</div>
+
+
+       </div>
+
+       <div class="profile" ng-show="offline">
+          
+          <header class="profile__Header">
+            
+            <h2>{{name[0] | uppercase}}</h2>
+
+          </header>
+
+          <div class="profile__my">
+            <ul class="ul">
+              <li class="list {{active}}">
+                <a href="" class="link" ng-click="tabs(1)">
+                  Mis tareas
+                </a>
+              </li>
+              <li class="list {{active2}}">
+                <a href="" class="link" ng-click="tabs(2)">
+                 Opciones
+                </a>
+              </li>
+            </ul>
+            <div class="profile__my__Show" ng-show="show">
+              <article class="article" ng-repeat="obj in mypre">
+                <header class="header">
+                  <h3>{{name[0] | uppercase}}</h3>
+                </header>
+                <div class="description">
+                  <p>{{obj.detalle}}</p>
+                </div>
+              </article>
+              
+            </div>
+            <div class="profile__my__Show" ng-show="show2">
+              
+              <a href="#" class="link btn-borrar" ng-click="remove($event)">
+                Borrar tareas
+              </a>
+              
+            </div>
+
+            
+          </div>
+
+
+       </div>
+
+
+		
+	</div>
+	
+</section>
+

@@ -1,0 +1,61 @@
+<section class="scrollable page-publicar" ng-controller="publicarController">
+
+	<div class="scrollable-content">
+		
+
+		<div class="navbar">
+	        <header class="header__Content f c" >
+	        	 <div ui-toggle="uiSidebarLeft" class="btn sidebar-toggle">
+	            	<i class="fa fa-bars"></i>
+	          	 </div>
+				 <div class="container__Header">
+				 	<a ng-href="#home">
+						<h2> 
+						Tareas <span>Hoy</span></h2>
+					</a>
+				 </div>
+			</header>
+	       
+       </div>
+
+		<form novalidate ng-submit="enviar($event)" class="form-pub">
+			
+			<div class="form-group">
+				<textarea name="" id="" cols="30" rows="3" placeholder="{{name | uppercase }} {{datacontinue}}" ng-model="details"></textarea>
+			</div>
+			<div class="form-group">
+				<select name="category" ng-model="category">
+					<option value="" selected disabled>Seleccióne categoria</option>
+					<option value="1">Matemáticas</option>
+					<option value="2">Estadistica y Cálculo</option>
+					<option value="3">Historia</option>
+					<option value="4">Ciencias Sociales</option>
+					<option value="5">Geografía</option>
+					<option value="6">Derecho</option>
+					<option value="7">Contabilidad</option>
+					<option value="8">Administración</option>
+					<option value="9">Ingles</option>
+					<option value="10">Idiomas</option>
+					<option value="11">Química</option>
+					<option value="12">Biología</option>
+					<option value="13">Informática</option>
+					<option value="14">Tecnología y Electrónica</option>
+					<option value="15">Religión</option>
+					<option value="16">Filosofía</option>
+					<option value="17">Psicología</option>
+					<option value="18">Arte</option>
+					<option value="19">Musica</option>
+				</select>
+			</div>
+			<div class="form-group f c">
+				<input type="submit" value="Publicar">
+				<a href="#preguntas" class="link">Ver Preguntas</a>
+			</div>
+		</form>
+
+	</div>
+
+	
+	
+</section>
+

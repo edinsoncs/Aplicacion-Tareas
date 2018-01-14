@@ -1,0 +1,78 @@
+<section class="scrollable page-view" ng-controller="viewController">
+
+	<div class="scrollable-content">
+		
+
+		<div class="navbar">
+	        <header class="header__Content f c" >
+	        	 <div ui-toggle="uiSidebarLeft" class="btn sidebar-toggle">
+	            	<i class="fa fa-bars"></i>
+	          	 </div>
+				 <div class="container__Header">
+				 	<a ng-href="#home">
+						<h2> 
+						Tareas <span>Hoy</span></h2>
+					</a>
+				 </div>
+			</header>
+	       
+       </div>
+
+		<section class="container_view" ng-show="conexion">
+			<header class="container_view--header f">
+				<div class="name">
+					<h2>{{user[0].nombre[0] | uppercase}}</h2>
+				</div>
+				<div class="description">
+					<p>
+						{{tarea[0].description}}
+					</p>
+				</div>
+			</header>
+			<div class="container_view--res">
+				<header class="header">
+					<h4>Respuestas</h4>
+				</header>
+			</div>
+			<div class="container_view--list">
+				<div class="container_view--header f" ng-repeat="i in res">
+					<div class="name">
+						<h4>{{i.id}}</h2>
+					</div>
+					<div class="description">
+						<p>
+							{{i.description}}
+						</p>
+					</div>
+				</div>
+
+				
+			</div>
+			<div class="container_view--form">
+				<form novalidate ng-submit="respuesta($event);">
+					<textarea name="" id="" cols="30" rows="2" ng-model="description"></textarea>
+					<input type="submit" value="Comentar">
+				</form>
+			</div>
+		</section>
+
+		<section class="container_view" ng-show="offline">
+			<header class="container_view--header f">
+				<div class="name">
+					<h2>{{user[0] | uppercase}}</h2>
+				</div>
+				<div class="description">
+					<p>
+						{{tarea}}
+					</p>
+				</div>
+			</header>
+			
+		</section>
+
+	</div>
+
+	
+	
+</section>
+
