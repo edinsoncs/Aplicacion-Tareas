@@ -1,3 +1,3 @@
 # Aplicacion-Tareas
 
-[embed]https://www.docdroid.net/ErbVA4C/presentacion.pdf[/embed]
+[embed]<iframe width="800" height="600" src="https://www.docdroid.net/ErbVA4C/presentacion.pdf" frameborder="0" allowtransparency allowfullscreen></iframe>[/embed]
